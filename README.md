@@ -12,4 +12,4 @@ track workouts with this app, keeps track of reps, cardio and so much more!
 as the user it also keeps a detailed graph of all the excersise the user has accomplished.
 
 ## ScreenShot
-![screenshot] (./public/images/fitnessTracker.jpeg)
+![screenshot](./public/images/fitnessTracker.jpeg)
