@@ -9,12 +9,8 @@
     "watch": "nodemon server.js",
     "seed": "node seeders/seed.js"
   },
-  "author": "Gauri Khandke",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/GauriKhandke/fitness-tracker/issues"
-  },
-  "homepage": "https://github.com/GauriKhandke/fitness-tracker#readme",
+  "author": "",
+  "license": "ISC",
   "dependencies": {
     "express": "^4.16.3",
     "mongoose": "^5.3.16",

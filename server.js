@@ -1,32 +1,28 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const logger = require("morgan");
-
-const PORT = process.env.PORT || 3000;
-
-// Create Express app
+//port constants
+const APP_PORT = process.env.PORT || 3001;
+const MONGOD_PORT = process.env.MONGODB_URI || "mongodb://localhost/fitnesstracker";
+// define new express app
 const app = express();
-
-// app.use(logger("dev"));
-
+//set app options
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-
+//use public directory
 app.use(express.static("public"));
-
-// Create mongoose database connection
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/fitnesstracker", {
+//connects db
+mongoose.connect( MONGOD_PORT, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true,
   useFindAndModify: false
 });
+//using api routes
+app.use(require("./routes/apiRoutes.js"));
+app.use(require("./routes/htmlRoutes.js"));
 
-// routes
-app.use(require("./routes/api-routes.js"));
-app.use(require("./routes/html-routes.js"));
-
-// Listen to request 
-app.listen(PORT, () => {
-  console.log(`App running on port ${PORT}!`);
+//starts app
+app.listen(APP_PORT, () => {
+  console.log(`App running on port ${APP_PORT}!`);
 });

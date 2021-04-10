@@ -1,4 +1,5 @@
 // get all workout data from back-end
+
 fetch("/api/workouts/range")
   .then(response => {
     return response.json();
@@ -32,8 +33,6 @@ API.getWorkoutsInRange()
 
   return arr;
   }
-
-// Function for populating chart  
 function populateChart(data) {
   let durations = duration(data);
   let pounds = calculateTotalWeight(data);
@@ -45,7 +44,6 @@ function populateChart(data) {
   let pie = document.querySelector("#canvas3").getContext("2d");
   let pie2 = document.querySelector("#canvas4").getContext("2d");
 
-  // Create new line chart
   let lineChart = new Chart(line, {
     type: "line",
     data: {
@@ -94,7 +92,6 @@ function populateChart(data) {
     }
   });
 
-  // Create bar chart
   let barChart = new Chart(bar, {
     type: "bar",
     data: {
@@ -148,7 +145,6 @@ function populateChart(data) {
     }
   });
 
-  // Create pie chart
   let pieChart = new Chart(pie, {
     type: "pie",
     data: {
@@ -190,7 +186,6 @@ function populateChart(data) {
   });
 }
 
-// Function to get Workout duration
 function duration(data) {
   let durations = [];
 
@@ -203,7 +198,6 @@ function duration(data) {
   return durations;
 }
 
-// Function to calculate total weight lifted in exercise
 function calculateTotalWeight(data) {
   let total = [];
 
@@ -216,7 +210,6 @@ function calculateTotalWeight(data) {
   return total;
 }
 
-// Function to get workout names
 function workoutNames(data) {
   let workouts = [];
 

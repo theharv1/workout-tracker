@@ -6,25 +6,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" />
-  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="style.css" />
   <title>Fitness Tracker</title>
 </head>
 
 <body>
-  <!-- Nav Bar -->
   <nav>
-    <div class="ui secondary menu navmenu">
-      <a class= "item navitem" href="/">Fitness Tracker</a>    
-      <div class="right menu">
-        <a class = "ui item navitem" href="/stats">Dashboard</a>
-      </div>
-    </div>
+    <a href="/">Fitness Tracker</a>
+    <a href="/stats">Dashboard</a>
   </nav>
   <div class="wrapper">
     <header>
       <h1>Fitness Tracker</h1>
     </header>
-    <!-- Enter Exercise Details -->
     <div class="ui container exercise">
       <div class="ui raised card m-auto">
         <h2>Add Your Exercise</h2>
@@ -37,7 +31,6 @@
               <option value="cardio">Cardio</option>
             </select>
           </div>
-          <!-- Erercise form for cardio type -->
           <div class="cardio-form d-none">
             <div class="cardio-name">
               <label for="cardio-name">Name:</label>
@@ -52,7 +45,6 @@
               <input type="number" name="duration" id="duration" placeholder="10" />
             </div>
           </div>
-          <!-- Ecercise form for resistance type -->
           <div class="resistance-form d-none">
             <div class="exercise">
               <label for="name">Exercise Name:</label>
@@ -90,8 +82,8 @@
   <div id="toast">
     Workout Added Successfully!
   </div>
-  <script src="./js/api.js"></script>
-  <script src="./js/exercise.js"></script>
+  <script src="/api.js"></script>
+  <script src="/exercise.js"></script>
 </body>
 
 </html>

@@ -1,4 +1,4 @@
-# ignore node modules
+# ignoring node modules
 ./node_modules
 # Logs
 logs
